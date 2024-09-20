@@ -65,13 +65,15 @@ const SlotMachine = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const backgroundColor = 0x1099bb; // Use a number for the color
+
   return (
     <div className="flex flex-col gap-5">
       <div className="relative">
         <Stage
           width={dimensions.width}
           height={dimensions.height}
-          options={{ backgroundColor: '#1099bb' }}
+          options={{ backgroundColor }}
         >
           <Container
             x={dimensions.width / 4}
