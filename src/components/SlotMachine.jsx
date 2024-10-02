@@ -69,15 +69,17 @@ const SlotMachine = () => {
 
   return (
     <div className="flex flex-col gap-5">
-      <div className="relative">
+      <div className="relative ">
         <Stage
           width={dimensions.width}
           height={dimensions.height}
-          options={{ backgroundColor }}
+          options={{ backgroundColor, border: 'black', borderColor: 'black' }}
         >
           <Container
             x={dimensions.width / 4}
             y={dimensions.height / 4}
+            borderWidth={5}
+            borderColor={0x000000}
             anchor={0.5}
           >
             {reels.map((reel, index) => (
